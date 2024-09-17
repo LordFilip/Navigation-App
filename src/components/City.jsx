@@ -1,8 +1,9 @@
-//import styles from "./City.module.css";
+import { useEffect } from "react";
+import styles from "./City.module.css";
 
-import { useParams, useSearchParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import { useCities } from "../contexts/CitiesContext";
 
-/*
 const formatDate = (date) =>
   new Intl.DateTimeFormat("en", {
     day: "numeric",
@@ -10,40 +11,40 @@ const formatDate = (date) =>
     year: "numeric",
     weekday: "long",
   }).format(new Date(date));
-*/
+
+const flagemojiToPNG = (flag) => {
+  try {
+    const countryCode = Array.from(flag, (codeUnit) => codeUnit.codePointAt())
+      .map((char) => String.fromCharCode(char - 127397).toLowerCase())
+      .join("");
+    return (
+      <img src={`https://flagcdn.com/24x18/${countryCode}.png`} alt="flag" />
+    );
+  } catch (error) {
+    console.error("Error converting flag emoji:", flag);
+    return <span>{flag}</span>;
+  }
+};
+
 function City() {
   const { id } = useParams();
+  const { getCity, currentCity } = useCities();
 
-  const [searchParams] = useSearchParams();
-
-  const lat = searchParams.get("lat");
-  const lng = searchParams.get("lng");
-
-  // TEMP DATA
-  /* const currentCity = {
-    cityName: "Lisbon",
-    emoji: "🇵🇹",
-    date: "2027-10-31T15:59:59.138Z",
-    notes: "My favorite city so far!",
-  };*/
-
-  //const { cityName, emoji, date, notes } = currentCity; */
-
-  return (
-    <>
-      <h1>City {id}</h1>
-      <h2>
-        Position: {lat}, {lng}
-      </h2>
-    </>
+  useEffect(
+    function () {
+      getCity(id);
+    },
+    [id]
   );
-  /*
+
+  const { cityName, emoji, date, notes } = currentCity;
+
   return (
     <div className={styles.city}>
       <div className={styles.row}>
         <h6>City name</h6>
         <h3>
-          <span>{emoji}</span> {cityName}
+          <span>{flagemojiToPNG(emoji)}</span> {cityName}
         </h3>
       </div>
 
@@ -73,7 +74,6 @@ function City() {
       <div></div>
     </div>
   );
-  */
 }
 
 export default City;
