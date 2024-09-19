@@ -8,6 +8,7 @@ import Button from "./Button";
 import BackButton from "./BackButton";
 import Message from "./Message";
 import { useUrlPosition } from "../hooks/useUrlPosition";
+import Spinner from "./Spinner";
 
 export function convertToEmoji(countryCode) {
   const codePoints = countryCode
@@ -31,6 +32,8 @@ function Form() {
 
   useEffect(
     function () {
+      if (!lat && !lng) return;
+
       async function fetchCityData() {
         try {
           setIsLoadingGeocoding(true);
@@ -57,6 +60,8 @@ function Form() {
     },
     [lat, lng]
   );
+
+  if (isLoadingGeocoding) return <Spinner />;
 
   if (geocodingError) return <Message message={geocodingError}></Message>;
   return (
