@@ -83,6 +83,42 @@
         "lat": "49.467428378492784",
         "lng": "10.239257812500002"
       }
+    },
+    {
+      "id": "5a28",
+      "cityName": "Svilajnac",
+      "country": "Serbia",
+      "emoji": "🇷🇸",
+      "date": "2024-09-20T13:01:28.032Z",
+      "notes": "aj cus ti grada",
+      "position": {
+        "lat": "44.1336832414262",
+        "lng": "21.236572265625004"
+      }
+    },
+    {
+      "id": "02ac",
+      "cityName": "Lebane",
+      "country": "Serbia",
+      "emoji": "🇷🇸",
+      "date": "2024-09-20T13:03:53.073Z",
+      "notes": "e zamisli grad lebane",
+      "position": {
+        "lat": "42.95987609454348",
+        "lng": "21.659545898437504"
+      }
+    },
+    {
+      "id": "9bd6",
+      "cityName": "Bosilegrad",
+      "country": "Serbia",
+      "emoji": "🇷🇸",
+      "date": "2024-09-20T13:04:55.375Z",
+      "notes": "bosileeegraaad",
+      "position": {
+        "lat": "42.4859290368977",
+        "lng": "22.280273437500004"
+      }
     }
   ]
 }
