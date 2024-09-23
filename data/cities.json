@@ -119,6 +119,54 @@
         "lat": "42.4859290368977",
         "lng": "22.280273437500004"
       }
+    },
+    {
+      "id": "0a46",
+      "cityName": "Lisbon",
+      "country": "Portugal",
+      "emoji": "🇵🇹",
+      "date": "2024-09-23T08:37:01.057Z",
+      "notes": "",
+      "position": {
+        "lat": "38.71240233070745",
+        "lng": "-9.158821105957033"
+      }
+    },
+    {
+      "id": "1f41",
+      "cityName": "Sebgag",
+      "country": "Algeria",
+      "emoji": "🇩🇿",
+      "date": "2024-09-23T08:37:27.759Z",
+      "notes": "",
+      "position": {
+        "lat": "34.13555516350783",
+        "lng": "1.9775390625000002"
+      }
+    },
+    {
+      "id": "6a31",
+      "cityName": "Umm Hajar",
+      "country": "Chad",
+      "emoji": "🇹🇩",
+      "date": "2024-09-23T08:37:33.767Z",
+      "notes": "",
+      "position": {
+        "lat": "14.163444384341652",
+        "lng": "19.116210937500004"
+      }
+    },
+    {
+      "id": "140f",
+      "cityName": "Kabinda",
+      "country": "Congo (the Democratic Republic of the)",
+      "emoji": "🇨🇩",
+      "date": "2024-09-23T08:37:37.981Z",
+      "notes": "",
+      "position": {
+        "lat": "-6.379670476159636",
+        "lng": "24.78515625"
+      }
     }
   ]
 }
