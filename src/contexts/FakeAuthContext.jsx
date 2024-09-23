@@ -12,7 +12,7 @@ function reducer(state, action) {
     case "login":
       return { ...state, user: action.payload, isAuthenticated: true };
 
-    case "logoute":
+    case "logout":
       return { ...state, user: null, isAuthenticated: false };
 
     default:
